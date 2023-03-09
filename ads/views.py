@@ -13,9 +13,9 @@ def status(request):
     return JsonResponse({"STATUS": 200})
 
 # Create your views here.
-@method_decorator(csrf_exempt, name='dispatch')
+@method_decorator(csrf_exempt, name='dispatch') # отключение проверки CSRF в классах декоратор @method_decorator
 class AnnouncementsView(View):
-
+    """ Вывод всех объявлений. Так же можно добавить объявление"""
     def get(self, request):
         announce = Announcements.objects.all()
 
@@ -54,6 +54,7 @@ class AnnouncementsView(View):
         })
 
 class AnnouncementsDetailView(DetailView):
+    """ Вывод детальной информации одной карточки объявления """
     model = Announcements
 
     def get(self, request, *args, **kwargs):
@@ -73,7 +74,7 @@ class AnnouncementsDetailView(DetailView):
 
 @method_decorator(csrf_exempt, name='dispatch')
 class CategoryView(View):
-
+    """ КАТЕГОРИИ """
     def get(self, request):
         categories = Category.objects.all()
 
@@ -99,6 +100,7 @@ class CategoryView(View):
 
 
 class CategoryDetailView(DetailView):
+    """ Вывод деталей категории """
     model = Category
 
     def get(self, request, *args, **kwargs):
