@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "2c176aab-6098-4f75-8be3-cb96b769d01e",
+		"name": "HW_27_ADS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23787636"
+	},
+	"item": [
+		{
+			"name": "GET_ВСЕ_ОБЪЯВЛЕНИЯ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ad/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ad",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ВСЕ_КАТЕГОРИИ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/cat/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"cat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_ДОБАВИТЬ_КАТЕГОРИЮ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alfa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/cat/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"cat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_ДОБАВИТЬ_ОБЪЯВЛЕНИЕ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Компьютер игровой\",\r\n    \"author\": \"Петр\",\r\n    \"price\": \"15000\",\r\n    \"description\": \"Современный игровой компьютер\",\r\n    \"address\": \"Санкт-Петербург, м. Чернышевская\",\r\n    \"is_published\": \"False\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ad/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ad",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ЗАПРОС_ОДНОЙ_КАТЕГОРИИ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/cat/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"cat",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ЗАПРОС_ОДНОГО_ОБЪЯВЛЕНИЯ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ad/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ad",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
