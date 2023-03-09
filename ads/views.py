@@ -1,6 +1,6 @@
 import json
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
 from django.views import View
@@ -9,6 +9,8 @@ from django.views.generic import DetailView
 
 from ads.models import Announcements, Category
 
+def status(request):
+    return JsonResponse({"STATUS": 200})
 
 # Create your views here.
 @method_decorator(csrf_exempt, name='dispatch')
