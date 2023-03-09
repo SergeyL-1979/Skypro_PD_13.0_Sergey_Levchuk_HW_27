@@ -4,6 +4,11 @@ from ads.models import Announcements, Category
 # Register your models here.
 @admin.register(Announcements)
 class AnnouncementsAdmin(admin.ModelAdmin):
+    """ Отображения полей в админке.
+    :param ordering - позволяет делать сортировку выбранной колонки
+    :param list_per_page - количество объектов на страницу
+    :param list_max_show_all - отобразить все объекты не более указанного количества
+    """
     list_display = (
         'name',
         'author',
@@ -20,5 +25,6 @@ class AnnouncementsAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    """ Отображает имена категорий в колонке """
     list_display = ('category_name', )
     ordering = ('category_name', )
